@@ -14,7 +14,7 @@ namespace aiws {
 class ContextStrategy {
 public:
     // TODO: make destruction safe through a base-class pointer.
-    ~ContextStrategy() = default;
+    virtual ~ContextStrategy() = default;
 
     // TODO: make this a required polymorphic operation.
 
