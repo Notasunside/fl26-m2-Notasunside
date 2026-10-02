@@ -63,9 +63,6 @@ ProcessingCore::ProcessingCore(std::unique_ptr<ChunkingStrategy> chunking,
                                 }
 
                                 impl_ = std::make_unique<Impl>(std::move(chunking), std::move(retrieval), std::move(context));
-    // M2 TODO: validate non-null strategies, take exclusive ownership, and
-    // compose the processing core from them.
-    // throw std::logic_error("M2 strategy injection not implemented");
 }
 
 

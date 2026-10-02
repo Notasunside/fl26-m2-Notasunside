@@ -199,7 +199,7 @@ void test_move_and_lifetime() {
         aiws::ProcessingCore moved(std::move(original));
 
             const auto results =moved.search("unrelated", 1);
-        check( results.size() == 1 && results[0].score == 17.0 ,  "move constr keeps strategies and corpus" );
+        check( results.size() == 1 && results[0].score == 17.0 ,  "move constr keeps strats and corpus" );
         aiws::ProcessingCore assigned;
 
         // <utility> std::move
@@ -226,7 +226,7 @@ int main() {
         test_move_and_lifetime();
     } catch (const std::exception& error) 
     {
-        std::cerr << "Unexpected exception: " << error.what() << '\n';
+        std::cerr << "unexpected exception: " << error.what() << '\n';
             return 1;
     }
 
